@@ -11,15 +11,18 @@ enemy_final_hp = enemy_hp - my_power
 def fight(enemy_hp, enemy_power):  # 定义fight方法，传入enemy的hp和power。疑问：当调用方法时传入的不是int怎么做限制
     my_hp = 1000  # 定义我的hp
     my_power = 200  # 定义我的power
-    while True:  # 多回合制用while循环实现
-        my_hp = my_hp - enemy_power  # 我的战损
-        enemy_hp = enemy_hp - my_power  # enemy的战损
-        if my_hp <= 0:  # 判断我的hp是否先为0
-            print(f"我的hp为{my_hp},我输了")
-            break
-        elif enemy_hp <= 0:  # 判断enemy的hp是否先为0
-            print(f"enemy的hp为{enemy_hp}，enemy输了")
-            break
+    try:
+        while True:  # 多回合制用while循环实现
+            my_hp = my_hp - enemy_power  # 我的战损
+            enemy_hp = enemy_hp - my_power  # enemy的战损
+            if my_hp <= 0:  # 判断我的hp是否先为0
+                print(f"我的hp为{my_hp},我输了")
+                break
+            elif enemy_hp <= 0:  # 判断enemy的hp是否先为0
+                print(f"enemy的hp为{enemy_hp}，enemy输了")
+                break
+    except:
+        print("enemy_hp和enemy_power都必须为数字")  # 调用方法的参数必须为数字
 
 
-fight(800, 400)  # 调用fight方法
+fight(1100, 250)  # 调用fight方法
