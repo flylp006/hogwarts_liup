@@ -1,1 +1,3 @@
 # hogwarts_liup--第一次配置Git
+#python 脚本实战第一次作业
+./first_work.py
