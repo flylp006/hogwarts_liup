@@ -25,4 +25,5 @@ def fight(enemy_hp, enemy_power):  # 定义fight方法，传入enemy的hp和powe
         print("enemy_hp和enemy_power都必须为数字")  # 调用方法的参数必须为数字
 
 
-fight(1100, 250)  # 调用fight方法
+# fight(1100, '250')  # 调用fight方法
+fight(input('请输入enemy_hp:'), input('请输入enemy_power:'))  # 调用fight函数
