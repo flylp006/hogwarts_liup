@@ -81,5 +81,5 @@ def show_all_info():
     print('')
     print('-' * 40)
     for jboer in employee_dic.items():
-        print(f"{jboer[0]}\t {jboer[1]['name']}\t {jboer[1]['sex']}\t {jboer[1]['salary']}")
+        print(f"{jboer[0]}\t{jboer[1]['name']}\t{jboer[1]['sex']}\t{jboer[1]['salary']}")
     print('-' * 40)
